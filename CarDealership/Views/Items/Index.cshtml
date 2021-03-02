@@ -1,0 +1,14 @@
+@using CarDealership.Models;
+<h1>Welcome to the Car Dealership!</h1>
+@if (Model.Count == 0)
+{
+  <p>There are no cars for sale yet.</p>
+}
+<ul>
+  @foreach (Item item in Model)
+  {
+    <li>@item.Description</li>
+  }
+</ul>
+<a href='/items/new'>Add a new car</a>
+<a href='/items'>See all cars</a>
