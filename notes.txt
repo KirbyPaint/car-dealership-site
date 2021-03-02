@@ -1,0 +1,17 @@
+CarDealership.Solution
+├── CarDealership
+│   ├── Controllers
+│   │   ├── HomeController.cs
+│   │   └── ItemsController.cs
+│   ├── Models
+│   │   └── Item.cs
+│   ├── Program.cs
+│   ├── Startup.cs
+│   ├── CarDealership.csproj
+│   └── Views
+│       ├── Home
+│       │   └── Index.cshtml
+│       └── Items
+│           ├── CreateForm.cshtml
+│           └── Index.cshtml
+└── CarDealership.Tests
