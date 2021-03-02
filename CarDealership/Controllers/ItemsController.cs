@@ -10,7 +10,7 @@ namespace CarDealership.Controllers
     [HttpGet("/items")]
     public ActionResult Index()
     {
-      List<Item> allItems = Item.GetAll();
+      List<Car> allItems = Car.GetAll();
       return View(allItems);
     }
 
@@ -21,9 +21,9 @@ namespace CarDealership.Controllers
     }
 
     [HttpPost("/items")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string MakeModel, int Price, int Miles)
     {
-      Item myItem = new Item(description);
+      Car myItem = new Car(MakeModel, Price, Miles);
       return RedirectToAction("Index");
     }
 

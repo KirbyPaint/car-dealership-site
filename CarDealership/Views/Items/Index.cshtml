@@ -5,9 +5,11 @@
   <p>There are no cars for sale yet.</p>
 }
 <ul>
-  @foreach (Item item in Model)
+  @foreach (Car item in Model)
   {
-    <li>@item.Description</li>
+    <li>@item.MakeModel</li>
+    <li>@item.Miles</li>
+    <li>@item.Price</li>
   }
 </ul>
 <a href='/items/new'>Add a new car</a>

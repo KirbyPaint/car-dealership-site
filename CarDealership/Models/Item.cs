@@ -2,16 +2,20 @@ using System.Collections.Generic;
 
 namespace CarDealership.Models
 {
-  public class Item
+  public class Car
   {
-    public string Description { get; set;}
-    private static List<Item> _instances = new List<Item> {};
-    public Item(string description)
+    public string MakeModel ;
+    public int Price;
+    public int Miles;
+    private static List<Car> _instances = new List<Car> {};
+    public Car(string makeModel, int price, int miles)
     {
-      Description = description;
+      MakeModel = makeModel;
+      Price = price;
+      Miles = miles;
       _instances.Add(this);
     }
-    public static List<Item> GetAll()
+    public static List<Car> GetAll()
     {
       return _instances;
     }
